@@ -1,19 +1,16 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
 
 function onLoginSubmit(event) {
   event.preventDefault(); //브라우저가 기본 행동을 하지 못하게 막음.
-  // event object는 preventDefault함수를 기본적으로 갖고 있음//
-  console.log(loginInput.value);
-}
-
-function handleLinkClick(event) {
-  event.preventDefault(); //브라우저가 기본 행동을 하지 못하게 막음.
-  // event object는 preventDefault함수를 기본적으로 갖고 있음//
-  console.dir(event);
+  loginForm.classList.add(HIDDEN_CLASSNAME); // loginForm에 hidden 클래스 추가
+  const username = loginInput.value;
+  console.log(username);
+  greeting.innerText = `Hello ${username}`; //   greeting.innerText = "Hello " + username;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
