@@ -1,50 +1,47 @@
 const quotes = [
   {
-    quote: "I never dreamed about success, I worked for it.",
-    author: "Estee Lauder",
-  },
-  {
-    quote: "Do not try to be original, just try to be good.",
-    author: "Paul Rand",
-  },
-  {
-    quote: "Do not be afraid to give up the good to go for the great.",
-    author: "John D. Rockefeller",
+    quote:
+      "꿈을 품고 뭔가 할 수 있다면 그것을 시작하라. 새로운 일을 시작하는 용기 속에 당신의 천재성과 능력과 기적이 모두 숨어 있다.",
+    author: "괴테",
   },
   {
     quote:
-      "If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.",
-    author: "Martin Luther King Jr.",
+      "성공하기를 원하는가? 그렇다면 이미 개척해놓은 성공의 길이 아니라 그 누구도 가지 않는 새로운 길을 개척해야만 한다.",
+    author: "로드 파머스턴",
   },
   {
     quote:
-      "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
-    author: "Thomas Edison",
+      "한 가지 뜻을 세우고, 그 길로 가라. 잘못도 있으리라. 실패도 있으리라. 그러나 다시 일어나서 앞으로 나아가라. 반드시 빛이 그대를 맞이할 것이다.",
+    author: "칸트",
+  },
+  {
+    quote: "시작하는 방법은 그만 말하고 이제 행동하는 것이다.",
+    author: "월트 디즈니",
+  },
+  {
+    quote: "위대한 것으로 향하기 위해 좋은 것을 포기하는 걸 두려워하지 마라.",
+    author: "존 록펠러",
+  },
+  {
+    quote: "왕관을 쓰려는자 그 무게를 버텨라.",
+    author: "셰익스피어",
+  },
+  {
+    quote: "패배의 공포가 승리의 짜릿함보다 커지게 하지 마라.",
+    author: "로버트 키요사키",
   },
   {
     quote:
-      "The fastest way to change yourself is to hang out with people who are already the way you want to be.",
-    author: "REid Hoffman",
+      "실패로 부터 성공을 발전시켜라. 좌절과 실패는 성공으로 가는 2가지의 가장 확실한 디딤돌이다.",
+    author: "데일 카네기",
   },
   {
-    quote:
-      "Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations.",
-    author: "Tim O Reilly",
+    quote: "운은 용기를 내는 사람의 편이다.",
+    author: "베르길리우스",
   },
   {
-    quote:
-      "Some people dream of success, while other people get up every morning and make it happen.",
-    author: "Wayne Huizenga",
-  },
-  {
-    quote:
-      "The only thing worse than starting something and falling.. is not starting something.",
-    author: "SEth Godin",
-  },
-  {
-    quote:
-      "If you really want to do something, you will find a way. If you do not, you will find an excuse.",
-    author: "Jim Rohn",
+    quote: "큰 목표를 이루고 싶으면 허락을 구하지 마라.",
+    author: "미상",
   },
 ];
 
