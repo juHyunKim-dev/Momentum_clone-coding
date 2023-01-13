@@ -2,11 +2,13 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY = "todos";
+
 const toDos = []; //빈 array 생성. toDo를 배열로 보관하기 위함.
 
 function saveToDos() {
   // toDos array를 localStorage에 집어넣음
-  localStorage.setItem("todos", JSON.stringify(toDos)); // ("key", value)
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // ("key", value)
   // JSON.stringify -> 객체든 배열이든 모두 문자열로 만들어줌.
   // localStorage에 저장할 때, array 는 저장할 수 없다. 오직 텍스트만 저장할 수 있다.
 }
@@ -38,3 +40,13 @@ function handleToDoSubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  toDos = parsedToDos;
+  parsedToDos.forEach((item) => console.log("this is the turn of ", item));
+  // forEach() : array의 각 item에 대해 function을 실행하게 해줌.
+  // arrow function(화살표 함수) : 함수를 더 짧게 작성하는 방법
+}
