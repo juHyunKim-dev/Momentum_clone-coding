@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = []; //빈 array 생성. toDo를 배열로 보관하기 위함.
+let toDos = []; //빈 array 생성. toDo를 배열로 보관하기 위함.
 
 function saveToDos() {
   // toDos array를 localStorage에 집어넣음
@@ -45,8 +45,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach((item) => console.log("this is the turn of ", item));
+  toDos = parsedToDos; // 빈 array에 이전 todo들을 복원.
+  parsedToDos.forEach(paintToDo);
   // forEach() : array의 각 item에 대해 function을 실행하게 해줌.
-  // arrow function(화살표 함수) : 함수를 더 짧게 작성하는 방법
 }
