@@ -20,8 +20,9 @@ function deleteToDo(event) {
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo; // span안에 텍스트 넣음
+  span.innerText = newTodo.text; // span안에 텍스트 넣음
   const button = document.createElement("button");
   button.innerText = "✅";
   button.addEventListener("click", deleteToDo);
@@ -34,8 +35,12 @@ function handleToDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newTodo); // toDos 라는 array에 newTodo를 푸쉬함.
-  paintToDo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(), // 랜덤한 id 부여, 각각의 li item 구별하기 위함.
+  };
+  toDos.push(newTodoObj); // toDos 라는 array에 newTodo를 푸쉬함.
+  paintToDo(newTodoObj);
   saveToDos();
 }
 
