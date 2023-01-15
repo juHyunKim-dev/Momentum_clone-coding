@@ -16,11 +16,13 @@ function saveToDos() {
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
+  toDos = toDos.filter((toDo) => toDo.id != parseInt(li.id)); // parseInt로 type 맞춰줌 ( string -> int 로 변환)
+  saveToDos();
 }
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
-  li.id = newTodo.id;
+  li.id = newTodo.id; // html태그에 id 만듦.
   const span = document.createElement("span");
   span.innerText = newTodo.text; // span안에 텍스트 넣음
   const button = document.createElement("button");
@@ -36,10 +38,11 @@ function handleToDoSubmit(event) {
   const newTodo = toDoInput.value;
   toDoInput.value = "";
   const newTodoObj = {
+    // toDos에 text를 저장하지 않고 object를 저장.
     text: newTodo,
     id: Date.now(), // 랜덤한 id 부여, 각각의 li item 구별하기 위함.
   };
-  toDos.push(newTodoObj); // toDos 라는 array에 newTodo를 푸쉬함.
+  toDos.push(newTodoObj); // toDos 라는 array에 newTodoObj를 푸쉬함.
   paintToDo(newTodoObj);
   saveToDos();
 }
@@ -53,4 +56,10 @@ if (savedToDos !== null) {
   toDos = parsedToDos; // 빈 array에 이전 todo들을 복원.
   parsedToDos.forEach(paintToDo);
   // forEach() : array의 각 item에 대해 function을 실행하게 해줌.
+  // == paintToDo를 parsedToDos 배열의 요소마다 실행
+  // == item이 object가 되는 것.
 }
+
+function sexyFilter() {}
+
+[1, 2, 3, 4].filter(sexyFilter);
