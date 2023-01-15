@@ -1,0 +1,48 @@
+#login-form {
+  width: 100%;
+  justify-content: center; /* width를 줘서 적용가능*/
+  /*display : flex 가 있으면 js가 실행이 안되는데, 없으니까 css, js 둘다 동작
+  없는데 왜 justify-content가 작동하지??????*/
+  position: fixed;
+  top: 340px; /* position: fixed 가 없으면 적용 불가*/
+  padding: 0;
+  outline: none;
+  text-align: center;
+  caret-color: white; /*커서 색깔 지정*/
+}
+
+#login-form input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid;
+  border-bottom-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0); /* 로그인 폼 투명으로 만듦 */
+  font-size: 45px;
+  text-align: center;
+  color: white;
+  width: 400px;
+}
+
+/* 로그인, 투두 input 모두에 적용*/
+
+input::placeholder {
+  color: white;
+  text-align: center;
+}
+
+input:focus {
+  /*클릭 시 생기는 테두리 제어*/
+  outline: none;
+}
+
+#greeting {
+  /* Hello, name.*/
+  display: flex;
+  width: 100%;
+  justify-content: center; /* width를 줘서 적용가능*/
+  position: fixed;
+  top: 340px;
+  font-size: 50px;
+  font-weight: 600;
+}

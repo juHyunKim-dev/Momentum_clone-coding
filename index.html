@@ -8,19 +8,26 @@
     <title>Momentum</title>
   </head>
   <body>
+    <h2 id="clock">00:00</h2>
     <form class="hidden" id="login-form">
       <input
         required
         maxlength="8"
         type="text"
-        placeholder="Waht is your name?"
+        placeholder="What's your name?"
+        onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'What\'s your name?'"
       />
-      <button>Log In</button>
     </form>
-    <h2 id="clock">00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
+      <input
+        type="text"
+        placeholder="Let's add ToDo and get it done!"
+        required
+        onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'Let\'s add ToDo and get it done!'"
+      />
     </form>
     <ul id="todo-list"></ul>
     <div id="quote">

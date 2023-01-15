@@ -26,7 +26,7 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text; // span안에 텍스트 넣음
   const button = document.createElement("button");
-  button.innerText = "✅";
+  button.innerText = "✔";
   button.addEventListener("click", deleteToDo);
   li.appendChild(span); // span을 li 안으로 위치
   li.appendChild(button);
@@ -59,7 +59,3 @@ if (savedToDos !== null) {
   // == paintToDo를 parsedToDos 배열의 요소마다 실행
   // == item이 object가 되는 것.
 }
-
-function sexyFilter() {}
-
-[1, 2, 3, 4].filter(sexyFilter);

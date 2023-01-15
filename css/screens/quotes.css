@@ -1,0 +1,19 @@
+#quote {
+  display: flex;
+  width: 100%;
+  flex-direction: column; /* flex 컨테이너 안 item의 배치 방향 결정*/
+  align-items: center; /*주축과 교차축 바뀜*/
+  position: fixed;
+  bottom: 10px;
+  padding: 20px;
+}
+
+#quote > span:first-child {
+  display: block;
+  font-size: 15.5px;
+  margin-bottom: 5px;
+}
+
+#quote > span:last-child {
+  font-size: 10.5px;
+}

@@ -15,7 +15,7 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username) {
   //함수 뒤의 (괄호) 안에 들어가는 것은 그 함수 안에서 사용할 변수의 이름을 임의로 지어주는 것 뿐
-  greeting.innerText = `Hello ${username}`; //   greeting.innerText = "Hello " + username;
+  greeting.innerText = `Hello, ${username}.`; //   greeting.innerText = "Hello " + username;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
