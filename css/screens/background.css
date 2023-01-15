@@ -11,8 +11,18 @@ img {
   display: flex;
   width: 100%;
   justify-content: center; /* width를 줘서 적용가능*/
+}
+
+#clock span:first-child {
   position: fixed;
-  top: 220px; /* position: fixed 가 없으면 적용 불가*/
-  padding: 10px 0px;
-  font-size: 100px;
+  top: 200px; /* position: fixed 가 없으면 적용 불가*/
+  font-size: 120px;
+}
+
+#clock span:last-child {
+  position: fixed;
+  top: 275px;
+  right: 269px;
+  font-size: 30px;
+  padding-left: 10px;
 }

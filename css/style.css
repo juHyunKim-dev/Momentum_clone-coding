@@ -6,6 +6,7 @@
 @import "screens/login.css";
 @import "screens/quotes.css";
 @import "screens/todo.css";
+@import "screens/weather.css";
 
 .hidden {
   display: none;

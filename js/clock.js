@@ -1,4 +1,5 @@
-const clock = document.querySelector("h2#clock");
+const time = document.querySelector("#clock span:first-child");
+const Week = document.querySelector("#clock span:last-child");
 
 function getClock() {
   const date = new Date(); // 호출 당시의 현재 날짜와 시간 알려줌
@@ -8,7 +9,8 @@ function getClock() {
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   // const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${week} ${hours}:${minutes}`;
+  Week.innerText = `${week}`;
+  time.innerText = `${hours}:${minutes}`;
 }
 
 getClock(); //처음은 바로 실행

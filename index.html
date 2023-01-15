@@ -8,7 +8,11 @@
     <title>Momentum</title>
   </head>
   <body>
-    <h2 id="clock">00:00</h2>
+    <div id="clock">
+      <span>week</span>
+      <span>00:00</span>
+    </div>
+    <!-- greetings.js -->
     <form class="hidden" id="login-form">
       <input
         required
@@ -20,16 +24,20 @@
       />
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input
-        type="text"
-        placeholder="Let's add ToDo and get it done!"
-        required
-        onfocus="this.placeholder = ''"
-        onblur="this.placeholder = 'Let\'s add ToDo and get it done!'"
-      />
-    </form>
-    <ul id="todo-list"></ul>
+    <!-- todo.js-->
+    <div class="hidden" id="todo">
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Let's add ToDo and get it done!"
+          required
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'Let\'s add ToDo and get it done!'"
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+    <!-- quotes.js-->
     <div id="quote">
       <span></span>
       <span></span>
