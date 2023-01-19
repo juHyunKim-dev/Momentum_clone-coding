@@ -26,7 +26,7 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text; // span안에 텍스트 넣음
   const button = document.createElement("button");
-  button.innerText = "✔";
+  button.innerText = "Done!";
   button.addEventListener("click", deleteToDo);
   li.appendChild(span); // span을 li 안으로 위치
   li.appendChild(button);

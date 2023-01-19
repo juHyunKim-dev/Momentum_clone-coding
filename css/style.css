@@ -2,7 +2,7 @@
 @import "reset.css";
 
 /*screens*/
-@import "screens/background.css";
+@import "screens/clock.css";
 @import "screens/login.css";
 @import "screens/quotes.css";
 @import "screens/todo.css";
@@ -14,6 +14,7 @@
 
 body {
   height: 100vh;
+  width: 100%;
   font-family: "IBM Plex Sans KR", sans-serif;
   color: white;
 }

@@ -22,5 +22,74 @@
   width: 300px;
 }
 
-/* 투두 리스트 css 완성하기*/
-/* 배경화면 수정하기*/
+.scrollbar {
+  position: fixed;
+  top: 480px;
+  right: 530.5px;
+  display: block;
+  width: 470px;
+  height: 160px;
+  overflow: auto;
+  border-radius: 9px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 11.5px;
+  position: relative;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  background-clip: padding-box;
+  border: 0px solid transparent;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+#todo-list {
+  padding-top: 10px;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.8);
+  font-size: 18px;
+  font-weight: 500;
+  width: 85%;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: center;
+}
+
+#todo-list span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#todo-list button {
+  position: absolute;
+  right: 7px;
+  flex: 1 1 auto;
+  padding: 3px, 5px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  font-weight: 500;
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 10px rgb(194, 194, 194);
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #0fb4d6 0%,
+    #3f75ff 50%,
+    #737ce8 100%
+  );
+}
+
+#todo-list button:hover {
+  background-position: right center;
+}

@@ -10,19 +10,24 @@ img {
 #clock {
   display: flex;
   width: 100%;
+  height: 100vh;
   justify-content: center; /* width를 줘서 적용가능*/
+  align-items: center;
 }
 
+/*00:00*/
 #clock span:first-child {
-  position: fixed;
-  top: 200px; /* position: fixed 가 없으면 적용 불가*/
+  position: relative;
+  top: -120px;
+  left: 7px;
+  /* position: fixed 가 없으면 적용 불가*/
   font-size: 120px;
 }
 
+/*week*/
 #clock span:last-child {
-  position: fixed;
-  top: 275px;
-  right: 269px;
+  position: relative;
+  top: -95px;
+  left: 7px;
   font-size: 30px;
-  padding-left: 10px;
 }
