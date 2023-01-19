@@ -20,7 +20,6 @@ img {
   position: relative;
   top: -120px;
   left: 7px;
-  /* position: fixed 가 없으면 적용 불가*/
   font-size: 120px;
 }
 
